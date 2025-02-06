@@ -49,15 +49,23 @@ function getPercentage(x,y) {
 
 document.addEventListener("mousedown",(mouse)=>{
     const [x,y] = getPercentage(mouse.clientX,mouse.clientY)
-    current = [x,y,1,1]
-    console.log(current)
+    if (x >= 0 && x <= 100) {
+        if (y >= 0 && y <= 100) {
+            current = [x,y,1,1]
+            console.log(current)
+        }
+    }
 })
 
 document.addEventListener("mousemove",(mouse)=>{
     if (current !== null) {
         const [x,y] = getPercentage(mouse.clientX,mouse.clientY)
-        current[2] = x-current[0]
-        current[3] = y-current[1]
+        if (x >= 0 && x <= 100) {
+            if (y >= 0 && y <= 100) {
+                current[2] = x-current[0]
+                current[3] = y-current[1]
+            }
+        }
     }
     update()
 
