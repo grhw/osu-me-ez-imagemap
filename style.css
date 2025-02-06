@@ -25,13 +25,15 @@ textarea {
 .main {
     width: 80vw;
     position: relative;
+    height: max-content;
+
 }
 .main > * {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: max-content;
+    height: 100%;
 }
 
 img {
@@ -39,6 +41,9 @@ img {
     pointer-events: none;
 }
 
+.image {
+    height: max-content;
+}
 
 canvas {
     z-index: 15;

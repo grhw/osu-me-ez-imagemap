@@ -40,6 +40,7 @@ function update() {
     if (current !== null) {
         displayRect(current[0],current[1],current[2],current[3])
     }
+    canvasElement.style.height = image.clientHeight + "px"
 }
 
 function getPercentage(x,y) {
